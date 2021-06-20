@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastLink</title>
+  </head>
+  <body>
+    <style>
+      iframe {
+        width: 300px;
+        height: 200px;
+      }
+    </style>
+    {% load static %}
+    <div id="box-fastlink">
+      <div style="text-align: center">
+        <input
+          class="btn btn-primary opacity-90 px-15 py-3"
+          type="submit"
+          id="btn_fast"
+          value="Link an Account(Yodlee)"
+        />
+      </div>
+    </div>
+
+    <div id="loader" style="text-align: center; display: none">
+      <span style="margin: auto; width: 50%"
+        >Please wait while we sync your account...</span
+      >
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.yodlee.com/fastlink/v3/initialize.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      var x = localStorage.getItem("token");
+      console.log(x);
+
+      document.cookie = "token" + "=" + x + "; path=/";
+
+      (function (window) {
+        function getCookie(name) {
+          let cookieValue = null;
+          if (document.cookie && document.cookie !== "") {
+            const cookies = document.cookie.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i].trim();
+
+              if (cookie.substring(0, name.length + 1) === name + "=") {
+                cookieValue = decodeURIComponent(
+                  cookie.substring(name.length + 1)
+                );
+                break;
+              }
+            }
+          }
+          return cookieValue;
+        }
+
+        const csrftoken = getCookie("csrftoken");
+        const myHeaders = new Headers({
+          "Content-Type": "text/plain",
+          "X-CSRFToken": csrftoken,
+        });
+
+        //Open FastLink_
+        var fastlinkBtn = document.getElementById("btn_fast");
+
+        fastlinkBtn.addEventListener(
+          "click",
+          function () {
+            document.getElementById("btn_fast").style.display = "none";
+            window.fastlink.open(
+              {
+                fastLinkURL:
+                  "https://fl4.sandbox.yodlee.com/authenticate/restserver/fastlink",
+                accessToken: "Bearer {{ resToken }}",
+                params: {
+                  configName: "Aggregation",
+                },
+                onSuccess: (data) => {
+                  fetch("/init/", {
+                    method: "POST",
+                    headers: myHeaders,
+                    body: JSON.stringify({
+                      resData: data,
+                    }),
+                  });
+                  console.log(data);
+                },
+                onError: function (data) {
+                  console.log(data);
+                },
+                onExit: function (data) {
+                  document.getElementById("loader").style.display = "block";
+                  document.getElementById("btn_fast").style.display = "none";
+                  setTimeout(function () {
+                    window.location.replace("http://127.0.0.1:8000/");
+                  }, 8000);
+                  console.log(data);
+                },
+                onEvent: function (data) {
+                  console.log(data);
+                },
+              },
+              "box-fastlink"
+            );
+          },
+          false
+        );
+      })(window);
+    </script>
+  </body>
+</html>

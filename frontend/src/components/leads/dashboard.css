@@ -1,0 +1,552 @@
+/* intro starts  */
+.intro-title {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+.intro-title span {
+  color: #214795;
+}
+
+.intro1 {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: bold;
+  color: #214795;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+.intro2 {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #7b7b7b;
+  padding-left: 20px;
+}
+
+.progress {
+  width: 128px;
+  height: 128px;
+  background-color: white;
+}
+
+.btn-container {
+  align-content: center;
+  padding: 5px;
+}
+
+.intro-button {
+  width: 170px;
+  border-radius: 12px;
+  background-color: #214795;
+  border-style: none;
+  font-family: "Poppins";
+  height: 40px;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+}
+
+.intro-button:active,
+.intro-button:focus {
+  border-style: none !important;
+  border-radius: 12px;
+  transform: translateY(4px);
+  border-color: #ffff;
+}
+
+.intro-button:hover {
+  background-color: #3e538e;
+}
+/* intro ends  */
+
+/* custom scroll bar start */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 12px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  -webkit-border-radius: 6ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}
+/* custom scroll bar ends */
+
+/* cards starts  */
+.title {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.balance {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-left: 200px;
+}
+.balance span {
+  color: #0b9280;
+}
+
+.card-container {
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  background-color: #fff;
+  padding: 1rem;
+}
+.card-container a {
+  text-decoration: none !important;
+}
+
+.card-container a:hover {
+  text-decoration: none !important;
+}
+
+.card-item {
+  width: 224px;
+  height: 128px;
+  background: #f3f9ff;
+  border-radius: 12px;
+  margin: 10px;
+
+  border-color: #dddd;
+  box-shadow: 2px 2px 4px #999999;
+}
+.card-title {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 250;
+  color: black;
+  padding-left: 16px;
+  padding-top: 13px;
+  text-decoration: none;
+  height: 23px;
+}
+
+.card-balance {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+  color: #0b9280;
+  height: 23px;
+}
+
+.card-footer1 {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #999999;
+  padding-left: 15px;
+  padding-top: 10px;
+  height: 12px;
+}
+
+.card-footer2 {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #999999;
+  padding-left: 15px;
+  padding-top: 10px;
+  height: 12px;
+}
+
+.footer-container {
+  padding: 15px;
+  text-align: center;
+}
+
+.footer-box {
+  height: 40px;
+  border-radius: 12px;
+  border-color: #dddd;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.footer-text {
+  font-family: "Poppins";
+  font-size: 14px;
+  padding: 20px;
+  color: #0758d2;
+}
+
+.footer-link {
+  padding: 10px;
+}
+
+.footer-link a {
+  color: #214795;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.button-footer {
+  width: 170px;
+  border-radius: 12px;
+  background-color: #214795;
+  border-style: none;
+  font-family: "Poppins";
+  height: 40px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.button-footer:active,
+.button-footer:focus {
+  border-radius: 12px;
+  transform: translateY(4px);
+  border-color: #ffff;
+}
+
+.button-footer:hover {
+  background-color: #3e538e;
+}
+
+.card-loan-bank {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #999999;
+  padding-left: 15px;
+}
+
+.card-loan-balance {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 16px;
+  color: #0b9280;
+  padding-top: 5px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.card-loan-due {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #d50000;
+  padding-left: 10px;
+}
+
+.card-loan-intrest {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #7b7b7b;
+  padding-left: 10px;
+}
+
+.btn-view {
+  align-content: right;
+  width: 170px;
+}
+
+.btn-view button {
+  border-radius: 12px;
+  background-color: #214795;
+  border-style: none;
+  font-family: "Poppins";
+  height: 40px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.btn-view button:active,
+.btn-view button:focus {
+  border-style: none !important;
+  border-radius: 12px;
+  transform: translateY(4px);
+  border-color: #ffff;
+}
+
+.credit-container {
+  width: 150px;
+  height: 210px;
+  border-color: #dddd;
+  box-shadow: 2px 2px 4px #999999;
+  margin-left: 10px;
+}
+
+.credit-title {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: black;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.credit-accnumber {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #7b7b7b;
+  padding-left: 10px;
+}
+
+.credit-img {
+  width: 110px;
+  height: 65px;
+  margin: 10px;
+}
+
+.credit-blance {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 10px;
+  color: #0b9280;
+}
+
+.credit-footer1 {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #d50000;
+  padding-left: 5px;
+}
+
+.credit-footer2 {
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #7b7b7b;
+  padding: 5px;
+}
+
+.side-ul {
+  list-style-type: none;
+}
+
+.side-ul li {
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+.side-ul li a {
+  text-decoration: none !important;
+}
+
+.logo {
+  width: 50px;
+  height: 45px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.logo-text {
+  margin-top: 20px;
+  color: #0758d2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.side-container {
+  width: 176px;
+  height: 50px;
+  font-size: 14px;
+  align-content: center;
+  color: #999999;
+  padding: 20px;
+}
+
+.side-name {
+  padding-left: 10px;
+}
+
+.side-ul li a:hover,
+.side-ul li a:active,
+.side-ul li a:focus {
+  color: #214795;
+  text-decoration: line-through;
+  background-color: black;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 50px;
+  border-color: #dddd;
+  box-shadow: 2px 2px 4px #999999;
+}
+
+.logo-top {
+  width: 50px;
+  height: 45px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.notification {
+  margin-left: 90%;
+  padding-top: 10px;
+}
+
+.profile-div {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: bold;
+  color: #214795;
+}
+
+.user-name {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.user-name span {
+  color: #214795;
+}
+
+/* cards ends  */
+
+/* Responsive css starts */
+@media only screen and (max-width: 800px) {
+  .notification {
+    margin-left: 80%;
+  }
+  .title {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .balance {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 250;
+    margin-left: 20px;
+    margin-top: 5px;
+    color: #999999;
+  }
+
+  .footer-text {
+    padding: 10px;
+  }
+
+  .button-footer {
+    width: 100%;
+    border-radius: 12px;
+    background-color: #214795;
+    border-style: none;
+    font-family: "Poppins";
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+  }
+
+  .btn-view {
+    width: 100%;
+    border-radius: 12px;
+    background-color: #214795;
+    border-style: none;
+    font-family: "Poppins";
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+  }
+
+  .progress {
+    align-content: center;
+    padding-top: 20px;
+    margin-left: 25%;
+  }
+
+  .intro1 {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .intro2 {
+    padding-left: 20px;
+  }
+
+  .intro-button {
+    width: 90%;
+
+    text-align: center;
+  }
+}
+
+/* Responsive css ends */
+
+/*
+ * react-circular-progressbar styles
+ * All of the styles in this file are configurable!
+ */
+
+.CircularProgressbar {
+  /*
+   * This fixes an issue where the CircularProgressbar svg has
+   * 0 width inside a "display: flex" container, and thus not visible.
+   */
+  width: 100%;
+  /*
+   * This fixes a centering issue with CircularProgressbarWithChildren:
+   * https://github.com/kevinsqi/react-circular-progressbar/issues/94
+   */
+  vertical-align: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #214795;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+  /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #214795;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: #d6d6d6;
+}
+
+/*
+ * Sample background styles. Use these with e.g.:
+ *
+ *   <CircularProgressbar
+ *     className="CircularProgressbar-inverted"
+ *     background
+ *     percentage={50}
+ *   />
+ */
+.CircularProgressbar.CircularProgressbar-inverted
+  .CircularProgressbar-background {
+  fill: #3e98c7;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}
